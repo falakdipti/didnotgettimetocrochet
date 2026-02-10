@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Anshuman</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    background: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHE0NDg5YmtiazN1N3o5eWZ3cjM0eHdjcDVsYmk2dXNmNjd2bWh6diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/mPQerpfa41Wdffq40W/giphy.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.screen {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(6px);
+}
+
+.active {
+    display: flex;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0 20px;
+}
+
+.subtitle {
+    margin-top: 15px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.tap {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: rgba(255, 0, 80, 0.8);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Envelope */
+.envelope {
+    width: 220px;
+    height: 140px;
+    background: #ff4d6d;
+    position: relative;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-bottom: 70px solid #ff758f;
+}
+
+.heart {
+    position: absolute;
+    top: 50px;
+    left: 95px;
+    font-size: 30px;
+}
+
+/* Letter */
+.letter {
+    background: #fff;
+    color: #000;
+    width: 80%;
+    max-width: 350px;
+    height: 60vh;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Video */
+video {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Screen 1 -->
+<div class="screen active" id="screen1" onclick="nextScreen(2)">
+    <h1>hello Anshuman Ji ;)</h1>
+    <div class="subtitle">tap here</div>
+</div>
+
+<!-- Screen 2 -->
+<div class="screen" id="screen2" onclick="nextScreen(3)">
+    <h1>I know this is not a crochet project I promised</h1>
+    <div class="subtitle">it will be done by your birthday dw</div>
+    <div class="subtitle">tap here</div>
+</div>
+
+<!-- Screen 3 Envelope -->
+<div class="screen" id="screen3">
+    <div class="subtitle">tap to open</div>
+    <div class="envelope" onclick="nextScreen(4)">
+        <div class="flap"></div>
+        <div class="heart">❤️</div>
+    </div>
+</div>
+
+<!-- Screen 4 Letter -->
+<div class="screen" id="screen4" onclick="nextScreen(5)">
+    <div class="letter">
+        <p><b>To Anshuman ji,</b></p>
+        <p>
+        I wish I could write you an actual letter, unfortunately I am not good with words like you and can't write more than 4 lines :'D
+        </p>
+        <p>
+        However, I think you know how I feel about you, right? I hope our bond grows stronger and I get to celebrate all my milestones with you by my side.
+        </p>
+        <p>
+        I haven't said it in a while, but I love you. You're important to me, and no matter what, I will always be there for you. Thank you for being one of the most cherished parts of my life.
+        </p>
+        <p>-Fallu ji &lt;3</p>
+    </div>
+    <div class="subtitle">tap here</div>
+</div>
+
+<!-- Screen 5 Video -->
+<div class="screen" id="screen5">
+    <h1>For you ❤️</h1>
+    <!-- Replace video.mp4 with your file name -->
+    <video controls>
+        <source src="VID20251216144316.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script>
+function nextScreen(num) {
+    document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+    document.getElementById("screen" + num).classList.add("active");
+}
+</script>
+
+</body>
+</html>
