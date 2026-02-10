@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Anshuman</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
 body {
@@ -50,31 +52,39 @@ h1 {
 }
 
 /* Envelope */
-.envelope {
+button:active {
+    transform: scale(0.95);
+  }
+
+  /* Envelope */
+  .envelope {
     width: 220px;
     height: 140px;
     background: #ff4d6d;
+    margin: 20px auto;
     position: relative;
     border-radius: 6px;
     cursor: pointer;
-}
+  }
 
-.flap {
+  .flap {
     position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-left: 110px solid transparent;
-    border-right: 110px solid transparent;
-    border-bottom: 70px solid #ff758f;
-}
+    width: 100%;
+    height: 100%;
+    background: #ff6f8e;
+    clip-path: polygon(0 0, 100% 0, 50% 60%);
+    transform-origin: top;
+    transition: 0.6s;
+  }
 
-.heart {
+  .heart {
     position: absolute;
-    top: 50px;
-    left: 95px;
-    font-size: 30px;
-}
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+  }
+
 
 /* Letter */
 .letter {
@@ -128,7 +138,7 @@ video {
     <div class="letter">
         <p><b>To Anshuman ji,</b></p>
         <p>
-        I wish I could write you an actual letter, unfortunately I am not good with words like you and can't write more than 4 lines :'D
+        I wish I could write you an actual letter, unfortunately, I am not good with words like you and can't write more than 4 lines :'D
         </p>
         <p>
         However, I think you know how I feel about you, right? I hope our bond grows stronger and I get to celebrate all my milestones with you by my side.
@@ -143,7 +153,7 @@ video {
 
 <!-- Screen 5 Video -->
 <div class="screen" id="screen5">
-    <h1>For you ❤️</h1>
+    <h1>hehe ❤️</h1>
     <!-- Replace video.mp4 with your file name -->
     <video controls>
         <source src="VID20251216144316.mp4" type="video/mp4">
@@ -159,3 +169,4 @@ function nextScreen(num) {
 
 </body>
 </html>
+
